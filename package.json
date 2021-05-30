@@ -1,0 +1,29 @@
+{
+	"name": "proxy-structural-pattern",
+	"version": "1.0.0",
+	"description": "An example of a proxy pattern in Typescrypt",
+	"main": "index.js",
+	"scripts": {
+		"start:ts": "tsc -w",
+		"start:node": "nodemon build/index.js",
+		"start": "concurrently npm:start:*"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ferisjuan/proxy-structural-pattern.git"
+	},
+	"keywords": [],
+	"author": "Juan Feris",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ferisjuan/proxy-structural-pattern/issues"
+	},
+	"homepage": "https://github.com/ferisjuan/proxy-structural-pattern#readme",
+	"dependencies": {
+		"concurrently": "^6.2.0",
+		"typescript": "^4.3.2"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.7"
+	}
+}
