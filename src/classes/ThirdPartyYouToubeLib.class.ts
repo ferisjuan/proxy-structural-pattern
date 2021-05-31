@@ -1,4 +1,4 @@
-import { IVideo } from '../interfaces/IVideo'
+import { IVideo } from '../interfaces/Video.interface'
 import { IThirdPartyYouToubeLib } from '../interfaces/ThirdPartyYouTubeLib.interface'
 
 import { videoList } from '../data/video-list'

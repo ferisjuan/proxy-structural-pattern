@@ -1,4 +1,4 @@
-import { IVideo } from './IVideo'
+import { IVideo } from './Video.interface'
 
 // The interface of a remote service.
 export interface IThirdPartyYouToubeLib {
