@@ -10,7 +10,7 @@ import { videoList } from '../data/video-list'
 // requests are fired at the same time, even if they all request
 // the same information.
 export class ThirdPartyYouToubeLib implements IThirdPartyYouToubeLib {
-	listVideos(): IVideo[] {
+	listVideos(): IVideo[] | null {
 		return videoList
 	}
 

@@ -3,17 +3,17 @@ import { IThirdPartyYouToubeLib } from '../interfaces/ThirdPartyYouTubeLib.inter
 import { ThirdPartyYouToubeLib } from './ThirdPartyYouToubeLib.class'
 
 export class CachedYouTube implements IThirdPartyYouToubeLib {
-	private listCache: IVideo[]
+	private listCache: IVideo[] | null
 	private videoCache: IVideo | null
 	public needReset: boolean
 
 	constructor(private service: ThirdPartyYouToubeLib) {
-		this.listCache = []
+		this.listCache = null
 		this.videoCache = null
-		this.needReset = true
+		this.needReset = false
 	}
 
-	listVideos(): IVideo[] {
+	listVideos(): IVideo[] | null {
 		if (this.listCache === null || this.needReset)
 			this.listCache = this.service.listVideos()
 
@@ -27,7 +27,7 @@ export class CachedYouTube implements IThirdPartyYouToubeLib {
 	}
 
 	downloadExists(id: string) {
-		return this.listCache.some(video => video.id === id)
+		return this.listCache?.some(video => video.id === id)
 	}
 
 	downloadVideo(id: string): void {
