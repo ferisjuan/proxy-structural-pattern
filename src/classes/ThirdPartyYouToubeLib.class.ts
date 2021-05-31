@@ -1,23 +1,7 @@
 import { IVideo } from '../interfaces/IVideo'
 import { IThirdPartyYouToubeLib } from '../interfaces/ThirdPartyYouTubeLib.interface'
 
-const videoList = [
-	{
-		id: '1',
-		title: 'video 1',
-		description: 'video 1 description',
-	},
-	{
-		id: '2',
-		title: 'video 2',
-		description: 'video 2 description',
-	},
-	{
-		id: '3',
-		title: 'video 3',
-		description: 'video 3 description',
-	},
-]
+import { videoList } from '../data/video-list'
 
 // The concrete implementation of a service connector. Methods
 // of this class can request information from YouTube. The speed
